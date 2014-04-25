@@ -1,8 +1,8 @@
 //Colors:
 $purple:rgb(126, 102, 104);
-$blue: rgb(37, 48, 57);
+$blue: #4B506A;
 $lt-blue:rgb(111, 136, 117);
-$red:rgb(122,36,22);
+$red: #8B1414;
 $brown: rgb(102, 81, 65);
 $off-white: rgb(230, 245, 202);
 
@@ -59,7 +59,8 @@ header{
 .middle-section{
 
     .ingredients{
-
+        letter-spacing: .25;
+        
         h4{
             color: $red;
             text-shadow: 0 1px $off-white;
@@ -68,6 +69,7 @@ header{
         li{
             display: block;
             color: $blue;
+            text-shadow: 0 1px $off-white;
         }
     }
 
@@ -79,17 +81,23 @@ header{
             max-width: 365px;
             max-height: 257px;
             border: 7px solid rgb(233, 183, 109);
-            outline: 3px solid rgb(34, 87, 104);
+            outline: 3px solid $blue;
         }
     }
 }
 
-//Description
+//Description of recipe
 .description{
     color: $brown;
     background-color: rgba(244, 228,203, .5);
 }
 
+//Social Media links
+.social-media{
+    a:hover{
+        border-bottom: none;
+    } 
+}
 
 //Media Queries:
 //Small screen 
@@ -103,6 +111,7 @@ header{
         }
 
         .navigation{
+
             li{
                 border-bottom: 1px solid rgb(150, 137, 119);
                 box-shadow: 0 1px 0 rgb(226,207,178);
@@ -114,8 +123,8 @@ header{
                     border-top: 1px solid rgb(180, 159, 132);
                 }
 
-                a:hover{
-                    border-bottom: 1px solid;
+                &:hover{
+                    text-decoration: underline;
                 }
             }
         }
@@ -246,7 +255,7 @@ header{
 
             ul {
                 li{
-                margin-left: 30px;
+                    margin-left: 30px;
                 }
             }
         }
@@ -256,6 +265,7 @@ header{
         font-size: 22px;
         text-align: center;
         clear: both;
+        height: 285px;
 
         .ingredients,
         .recipe-image{
@@ -271,8 +281,8 @@ header{
         }
 
         .ingredients{
-            margin-left: 20%;
-            margin-top: 45px;
+            margin-left: 16%;
+            margin-top: 30px;
 
             h4,
             ul{
