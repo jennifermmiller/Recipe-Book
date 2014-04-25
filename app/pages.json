@@ -1,0 +1,51 @@
+{
+   "pages":[
+      {
+      	"id": "item1913",
+        "linkTitle":"shrimp",
+		"photo":"shrimp.jpg",
+		"title":"Shrimp for One",
+		"ingredients":[
+		   "2 #16 shrimp",
+		   "1 daikon radish",
+		   "1 zucchini",
+		   "1 pinch salt",
+		   "1/2 cup butter",
+		   "1 pesto"
+		],
+		"description":"The term shrimp is used to refer to some decapod crustaceans, although the exact animals covered can vary. Used broadly, it may cover any of the groups with elongated bodies and a primarily swimming mode of locomotion – chiefly Caridea and Dendrobranchiat. In some fields, however, the term is used more narrowly, and may be restricted to Caride, to smaller species of either group, or to only the marine species. Under the broader definition, shrimp may be synonymous with prawn, covering stalk-eyed swimming crustacean."         
+      },
+      {
+      	"id": "item1914",
+        "linkTitle":"scallop",
+		"photo":"scallop.jpg",
+		"title":"Scallops con haricots",
+		"ingredients":[
+		   "3 diver scallops",
+		   "1 red onion",
+		   "1 green onion",
+		   "4 green beans",
+		   "2 cloves garlic",
+		   "2 tbsp scriracha",
+		   "1 tsp salt",
+		   "1/2 cup butter"
+		],
+		"description":"Add the butter and oil to a 12 to 14-inch saute pan on high heat. Salt and pepper the scallops. Once the fat begins to smoke, gently add the scallops, making sure they are not touching each other. Sear the scallops for 1 1/2 minutes on each side. The scallops should have a 1/4-inch golden crust on each side while still being translucent in the center. Serve immediately."         
+      },
+      {
+      	"id": "item1915",
+		"linkTitle":"duck",
+		"photo":"duck.jpg",
+		"title":"Duck Dinner",
+		"ingredients":[
+		   "1 duck",
+		   "1 salt",
+		   "2 red wine",
+		   "1 balsamic vinegar",
+		   "1 oz black pepper",
+		   "1/2 oz chives"
+		],
+		"description":"With a sharp knife score the fat of the duck breasts in a criss-cross pattern. Season the duck with salt and pepper. Warm a heavy bottomed ovenproof skillet over medium heat.  Place the duck breasts, fat side down, in the skillet to render off the fat, about 6 minutes. Reserve rendered duck fat. Turn the duck breasts over and sear for 1 minute. Turn the fat side down again and place the skillet into the oven to roast for 7 to 9 minutes, until breasts are medium rare. Let the duck breasts rest for 5 minutes then thinly slice."         
+      }
+   ]
+}

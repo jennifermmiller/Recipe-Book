@@ -43,32 +43,9 @@
         <div class="container">
             <header>
                 <h1>Granny's Recipe Book</h1>
-                <ul class="navigation">
-                    <li><a href="#shrimps">shrimps</a></li>
-                    <li><a href="#scallops">scallops</a></li>
-                    <li><a href="#duck">duck</a></li>
-                </ul>
+                <ul class="navigation"><!-- append repice links here--></ul>
             </header>
-            <div class="middle-section">    
-                <div class="recipe-image">
-                    <!-- Image of recipe: -->
-                    <img src="images/shrimp.jpg"/>
-                </div>
-                <div class="ingredients">
-                    <h4><!--Recipe title goes here-->Shrimp for One</h4>
-                    <ul><!--ingredients go here-->
-                        <li>2 #16 shrimp</li>
-                        <li>1 daikon radish</li>
-                        <li>1 zucchini</li>
-                        <li>1 pinch salt</li>
-                        <li>1/2 cup butter</li>
-                        <li>1 pesto</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="description"><!--Insert Recipe instructions here-->
-                <p>The term shrimp is used to refer to some decapod crustaceans, although the exact animals covered can vary. Used broadly, it may cover any of the groups with elongated bodies and a primarily swimming mode of locomotion – chiefly Caridea and Dendrobranchiat. In some fields, however, the term is used more narrowly, and may be restricted to Caride, to smaller species of either group, or to only the marine species. Under the broader definition, shrimp may be synonymous with prawn, covering stalk-eyed swimming crustacean.</p>
-            </div>
+            <div class="recipe-info"><!--insert recipes here--></div>
             <div class="social-media">
                 <ul>
                     <li>
@@ -85,12 +62,39 @@
                     </li>
                 </ul>
             </div>
-        </div>
+            
+            <!-- Template for navigation: -->
+            <script type="text/template" id="navigation-template">
+                <li><%=this.model.get('linkTitle')%></li>
+            </script>
 
+            <!-- Template to display recipes: -->
+            <script type="text/template" id="recipe-template">
+                <div class="middle-section">    
+                    <div class="recipe-image">
+                        <!-- Image of recipe: -->
+                        <img src="images/<%=this.model.get('photo')%>"/>
+                    </div>
+                    <div class="ingredients">
+                        <h4><!--Recipe title goes here--><%=this.model.get('title')%></h4>
+                        <ul><!--ingredients go here--></ul>
+                    </div>
+                </div>
+                <div class="description"><!--Insert Recipe instructions here-->
+                    <p><%=this.model.get('description')%></p>
+                </div>
+            </script>
+
+            <!-- Template for ingredients -->
+            <script type="text/template" id="ingredient-template">
+                <li></li>
+            </script>
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
+        <script src="bower_components/backbone/backbone.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -105,6 +109,10 @@
         </script>
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/model.js"></script>
+        <script src="scripts/router.js"></script>
+        <script src="scripts/navigation-view.js"></script>
+        <script src="scripts/recipe-view.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>

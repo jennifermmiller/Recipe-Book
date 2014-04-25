@@ -168,7 +168,7 @@ header{
 //Larger screens
 @media only screen and (min-width: 750px){
     .container{
-        width: 750px;
+        width: 720px;
         padding: 30px;
     }
 
@@ -240,6 +240,7 @@ header{
 
         .navigation{
             float: right;
+            margin-right: 3%;
             font-size: 26px;
             margin-top: 32px;
 
@@ -253,6 +254,7 @@ header{
 
     .middle-section{
         font-size: 22px;
+        text-align: center;
         clear: both;
 
         .ingredients,
@@ -263,22 +265,29 @@ header{
         .recipe-image{
             margin-top: 40px;
             float: right;
+            margin-right: 5%;
             height: 257px;
-            width: 365px;
+            width: 312px;
         }
 
         .ingredients{
             margin-left: 20%;
             margin-top: 45px;
 
+            h4,
+            ul{
+                text-align: left;
+            }
+
             h4{
-                padding-bottom: 25px;
+                margin-bottom: 20px;
             }
         }
     }
 
     .description{
-        margin-top: 38px;
+        width: 88%;
+        margin-top: 45px;
         padding: 10px 20px 25px 20px;
         border: 3px solid rgba(209, 190, 159, .8);
         box-shadow: 1px 1px rgb(196, 196, 196);
