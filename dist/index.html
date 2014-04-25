@@ -1,0 +1,26 @@
+<!DOCTYPE html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html class=no-js><!--<![endif]--><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>recipesapp</title><meta name=description content=""><meta name=viewport content="width=device-width"><style type=text/css>@font-face {
+                font-family: "ArchitectsDaughter";
+                src: url(fonts/ArchitectsDaughter.ttf) format("truetype");
+            }
+            body.customfont { 
+                font-family: "ArchitectsDaughter", Verdana, Tahoma;
+            }</style><!-- Place favicon.ico and apple-touch-icon.png in the root directory --><link rel=stylesheet href=styles/vendor.css><link rel=stylesheet href=styles/8e994e31.main.css><script src=bower_components/modernizr/modernizr.js></script><body class=customfont><!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]--><div id=left></div><div id=right></div><div id=top></div><div id=bottom></div><div class=container><header><h1>Granny's Recipe Book</h1><ul class=navigation><!-- append repice links here--></ul></header><div class=recipe-info><!--insert recipes here--></div><div class=social-media><ul><li><a href=#><img class=img-social-diff src=images/23bc5ffa.facebook1.png></a></li><li><a href=#><img class=img-social src=images/646a4032.gplus.png></a></li><li><a href=#><img class=img-social src=images/78073754.pin.png></a></li><li><a href=#><img class=img-social-diff src=images/559451f7.twitter1.png></a></li></ul></div><!-- Template for navigation: --><script type=text/template id=navigation-template><li><%=this.model.get('linkTitle')%></li></script><!-- Template to display recipes: --><script type=text/template id=recipe-template><div class="middle-section">    
+                    <div class="recipe-image">
+                        <!-- Image of recipe: -->
+                        <img src="images/<%=this.model.get('photo')%>"/>
+                    </div>
+                    <div class="ingredients">
+                        <h4><!--Recipe title goes here--><%=this.model.get('title')%></h4>
+                        <ul><!--ingredients go here--></ul>
+                    </div>
+                </div>
+                <div class="description"><!--Insert Recipe instructions here-->
+                    <p><%=this.model.get('description')%></p>
+                </div></script><!-- Template for ingredients --><script type=text/template id=ingredient-template><li><!--Recipe links--></li></script><script src=scripts/022f5ef7.vendor.js></script><!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');</script><script src=scripts/e1c4de0f.main.js></script></div>
