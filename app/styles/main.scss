@@ -1,8 +1,9 @@
+@import "compass/css3";
+
 //Colors:
-$purple:rgb(126, 102, 104);
-$blue: #4B506A;
+$blue: rgb(75, 80, 106);
 $lt-blue:rgb(111, 136, 117);
-$red: #8B1414;
+$red: rgb(139, 20, 20);
 $brown: rgb(102, 81, 65);
 $off-white: rgb(230, 245, 202);
 
@@ -14,7 +15,8 @@ $off-white: rgb(230, 245, 202);
     padding: 0.2em 0;
 }
 
-//General Styles
+//*************************Not layout dependent********************
+//Throughout page:
 *{
     margin: 0 auto;
     padding: 0;
@@ -24,10 +26,7 @@ $off-white: rgb(230, 245, 202);
 html {
     font-size: 20px;
     background: url(../images/paper.jpg) no-repeat center center fixed; 
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
+    @include background-size(cover);
 }
 
 li{
@@ -41,13 +40,13 @@ a{
     &:hover{
         color: $lt-blue;
         border-bottom: 2px solid;
-        box-shadow: 0 1px 0 $off-white;
+        @include box-shadow(0 1px 0 $off-white);
     }
 }
 
-//Header Section
+//Title and Navigation
 header{
-    text-shadow: 0 1px $off-white;
+    @include text-shadow(0 1px $off-white);
 
     h1{
         color: $red;
@@ -55,21 +54,24 @@ header{
     }
 }
 
-//Middle Section with ingredients and image
+//Middle Section (ngredients and image)
 .middle-section{
 
     .ingredients{
         letter-spacing: .25;
 
+        h4,
+        li{
+            @include text-shadow(0 1px $off-white);
+        }
+
         h4{
             color: $red;
-            text-shadow: 0 1px $off-white;
         }
 
         li{
             display: block;
             color: $blue;
-            text-shadow: 0 1px $off-white;
         }
     }
 
@@ -99,9 +101,10 @@ header{
     } 
 }
 
-//Media Queries:
-//Small screen 
+//***********************Start of Media Queries******************************
+//Small screens
 @media only screen and (max-width: 749px){
+    //Title and Navigation
     header{
         text-align: center;
 
@@ -114,10 +117,10 @@ header{
 
             li{
                 border-bottom: 1px solid rgb(150, 137, 119);
-                box-shadow: 0 1px 0 rgb(226,207,178);
                 background: rgba(228, 225, 219, 0.4);
                 height: 50px;
                 line-height: 50px;
+                @include box-shadow(0 1px 0 rgb(226,207,178));
 
                 &:first-child{
                     border-top: 1px solid rgb(180, 159, 132);
@@ -130,6 +133,7 @@ header{
         }
     }
 
+    //Ingredients and Image
     .middle-section{
         margin-top: 22px;
         width: 60%;
@@ -146,13 +150,13 @@ header{
         }
     }
 
+    //Description/Directions
     .description{
-        width: auto;
         margin: 0 10px;
         padding: 10px 10px 20px;
         border: 2px solid rgba(199, 190, 165, .7);
-        box-shadow: 1px 1px 1px 1px rgb(216, 206, 181),
-                    0 -1px rgb(216, 202, 174);
+        @include box-shadow(1px 1px 1px 1px rgb(216, 206, 181),
+                            0 -1px rgb(216, 202, 174));
 
         p{
             font-size: 16px;
@@ -160,6 +164,7 @@ header{
         }
     }
 
+    //Social Media Icons
     .social-media{
 
         ul{
@@ -176,9 +181,15 @@ header{
 
 //Larger screens
 @media only screen and (min-width: 750px){
+    //General:
     .container{
         width: 750px;
     }
+
+     li{
+        display: inline;
+    }
+    //end of general
 
     //Browser border
     #top, 
@@ -220,11 +231,7 @@ header{
     }
     //End of Browser border
 
-    li{
-        display: inline;
-    }
-
-    //Header
+    //Title and Navigation
     header{
         margin-top: 30px;
 
@@ -260,7 +267,7 @@ header{
         }
     }
 
-    //Display recipe
+    //Ingredients and Image
     .recipe-info{
         margin-top: 15px;
 
@@ -298,12 +305,13 @@ header{
             }
         }
 
+        //Decription/Directions
         .description{
             width: 88%;
             margin-top: 45px;
             padding: 10px 15px 25px 20px;
             border: 3px solid rgba(209, 190, 159, .8);
-            box-shadow: 1px 1px rgb(196, 196, 196);
+            @include box-shadow(1px 1px rgb(196, 196, 196));
 
             p{
                 letter-spacing: .5px;
@@ -315,8 +323,7 @@ header{
         //Social Media icons
         .social-media{
             float: right;
-            margin-top: 15px;
-            margin-right: 40px;
+            margin: 15px 40px 0 0;
 
             a{
                 margin-right: 5px;
