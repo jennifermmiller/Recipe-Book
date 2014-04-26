@@ -3,7 +3,7 @@ var Recipe = Backbone.Model.extend({});
 var RecipesCollection = Backbone.Collection.extend({
 	model: Recipe,
 
-	url: "/../pages.json",
+	url: '/../pages.json',
 
 	parse: function(result){
 		return result.pages;

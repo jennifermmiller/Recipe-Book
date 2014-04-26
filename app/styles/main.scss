@@ -55,12 +55,12 @@ header{
     }
 }
 
-//Middle Section
+//Middle Section with ingredients and image
 .middle-section{
 
     .ingredients{
         letter-spacing: .25;
-        
+
         h4{
             color: $red;
             text-shadow: 0 1px $off-white;
@@ -86,7 +86,7 @@ header{
     }
 }
 
-//Description of recipe
+//Description/directions of/for recipe
 .description{
     color: $brown;
     background-color: rgba(244, 228,203, .5);
@@ -177,8 +177,7 @@ header{
 //Larger screens
 @media only screen and (min-width: 750px){
     .container{
-        width: 720px;
-        padding: 30px;
+        width: 750px;
     }
 
     //Browser border
@@ -219,12 +218,16 @@ header{
     #bottom { 
         bottom: 0; 
     }
+    //End of Browser border
 
     li{
         display: inline;
     }
 
+    //Header
     header{
+        margin-top: 30px;
+
         h1, 
         .navigation{
             display: inline-block;
@@ -244,91 +247,80 @@ header{
             -o-transform-origin: right top;
             transform: rotate(-10deg);
             transform-origin: right top;
-
         }
 
         .navigation{
-            float: right;
-            margin-right: 3%;
-            font-size: 26px;
+            margin-left: 40px;
+            font-size: 22px;
             margin-top: 32px;
+            
+            a{
+                margin-left: 35px;
+            }
+        }
+    }
 
-            ul {
-                li{
-                    margin-left: 30px;
+    //Display recipe
+    .recipe-info{
+        margin-top: 15px;
+
+        .middle-section{
+            font-size: 22px;
+            text-align: center;
+            clear: both;
+            height: 285px;
+
+            .ingredients,
+            .recipe-image{
+                display: inline-block;
+            }
+
+            .recipe-image{
+                margin-top: 40px;
+                float: right;
+                margin-right: 5%;
+                height: 257px;
+                width: 312px;
+            }
+
+            .ingredients{
+                margin-left: 16%;
+                margin-top: 30px;
+
+                h4,
+                ul{
+                    text-align: left;
+                }
+
+                h4{
+                    margin-bottom: 20px;
                 }
             }
         }
-    }
 
-    .middle-section{
-        font-size: 22px;
-        text-align: center;
-        clear: both;
-        height: 285px;
+        .description{
+            width: 88%;
+            margin-top: 45px;
+            padding: 10px 15px 25px 20px;
+            border: 3px solid rgba(209, 190, 159, .8);
+            box-shadow: 1px 1px rgb(196, 196, 196);
 
-        .ingredients,
-        .recipe-image{
-            display: inline-block;
+            p{
+                letter-spacing: .5px;
+                line-height: 1.25;
+                font-size: 16px;
+            }
         }
 
-        .recipe-image{
-            margin-top: 40px;
+        //Social Media icons
+        .social-media{
             float: right;
-            margin-right: 5%;
-            height: 257px;
-            width: 312px;
-        }
+            margin-top: 15px;
+            margin-right: 40px;
 
-        .ingredients{
-            margin-left: 16%;
-            margin-top: 30px;
-
-            h4,
-            ul{
-                text-align: left;
+            a{
+                margin-right: 5px;
             }
-
-            h4{
-                margin-bottom: 20px;
-            }
-        }
-    }
-
-    .description{
-        width: 88%;
-        margin-top: 45px;
-        padding: 10px 20px 25px 20px;
-        border: 3px solid rgba(209, 190, 159, .8);
-        box-shadow: 1px 1px rgb(196, 196, 196);
-
-        p{
-            line-height: 1.25;
-            font-size: 17px;
-        }
-    }
-
-    .social-media{
-        float: right;
-        margin-top: 15px;
-        margin-right: 10px;
-
-        a{
-            margin-right: 5px;
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

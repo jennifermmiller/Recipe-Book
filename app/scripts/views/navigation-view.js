@@ -1,12 +1,15 @@
+//Create navigation display based on json file
 var NavigationView = Backbone.View.extend({
     tagName: 'a',
 
+    className: 'transition',
+
     createTemplate: _.template($('#navigation-template').text()),
 
-    initialize: function(){ 
+    initialize: function(){
         this.setHrefAttr();
 
-        $('.navigation').append(this.el); 
+        $('.navigation').append(this.el);
 
         this.render();
     },
@@ -18,6 +21,6 @@ var NavigationView = Backbone.View.extend({
     setHrefAttr: function(){
         var id = this.model.get('id');
         var link  = '#/recipes/' + id;
-        this.$el.attr({href: link})
+        this.$el.attr({href: link});
     }
 });

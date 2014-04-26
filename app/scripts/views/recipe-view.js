@@ -1,9 +1,9 @@
-//Display selected recipe:
+//Display selected recipe
 var RecipeView = Backbone.View.extend({
 	createTemplate: _.template($('#recipe-template').text()),
 
-	initialize: function(){
-		$('.recipe-info').html(this.el);
+	initialize: function(){	
+		$('.recipe-info').html(this.el); 
 
 		this.render();
 

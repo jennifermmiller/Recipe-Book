@@ -13,12 +13,18 @@ var MainRouter = Backbone.Router.extend({
 	},
 
 	showRecipe:function(id){
-		console.log('here?');
+		//Find correct recipe
 		var recipeId = this.recipes.find(function(recipe){
-			console.log('and here?');
 			return recipe.get('id') === id;
 		});
 
-		new RecipeView({model:recipeId});
-	}
+		//Page Transition
+		$('.recipe-info').fadeOut('slow', function() {
+			new RecipeView({model:recipeId});
+			new SocialMediaView();
+			setTimeout(function() {
+				$('.recipe-info').fadeIn('slow');
+			}, 1000);
+		});
+    }
 });

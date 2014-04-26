@@ -16,7 +16,7 @@
                 src: url(fonts/ArchitectsDaughter.ttf) format("truetype");
             }
             body.customfont { 
-                font-family: "ArchitectsDaughter", Verdana, Tahoma;
+                font-family: "ArchitectsDaughter", "cursive";
             }
         </style>
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -36,32 +36,19 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <!-- Divs to make browser border on larger screens -->
         <div id="left"></div>
         <div id="right"></div>
         <div id="top"></div>
         <div id="bottom"></div>
+        <!-- End of broswer border divs -->
+
         <div class="container">
             <header>
                 <h1>Granny's Recipe Book</h1>
                 <ul class="navigation"><!-- append repice links here--></ul>
             </header>
             <div class="recipe-info"><!--insert recipes here--></div>
-            <div class="social-media">
-                <ul>
-                    <li>
-                        <a href="#" ><img class="img-social-diff" src="images/facebook1.png"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img class="img-social" src="images/gplus.png"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img class="img-social" src="images/pin.png"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img class="img-social-diff" src="images/twitter1.png"></a>
-                    </li>
-                </ul>
-            </div>
             
             <!-- Template for navigation: -->
             <script type="text/template" id="navigation-template">
@@ -85,9 +72,23 @@
                 </div>
             </script>
 
-            <!-- Template for ingredients -->
-            <script type="text/template" id="ingredient-template">
-                <li><!--Recipe links--></li>
+            <!-- Template for Social Media Buttons -->
+            <script type="text/templ" id="social-media-template">
+                <!--Social Media Buttons-->
+                <ul>
+                    <li>
+                        <a href="#" ><img class="img-social" src="images/facebook.png"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img class="img-social" src="images/gplus.png"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img class="img-social" src="images/pin.png"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img class="img-social" src="images/twitter.png"></a>
+                    </li>
+                </ul>
             </script>
 
         <!-- build:js scripts/vendor.js -->
@@ -111,8 +112,9 @@
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/model.js"></script>
         <script src="scripts/router.js"></script>
-        <script src="scripts/navigation-view.js"></script>
-        <script src="scripts/recipe-view.js"></script>
+        <script src="scripts/views/navigation-view.js"></script>
+        <script src="scripts/views/recipe-view.js"></script>
+        <script src="scripts/views/social-media-view.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
