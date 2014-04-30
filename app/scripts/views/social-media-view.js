@@ -26,7 +26,7 @@ var SocialMediaView = Backbone.View.extend({
 	},
 
 	removeHoverState: function(ev){
-		target = $(ev.currentTarget);
+		var target = $(ev.currentTarget);
 	    $(target).attr('src', function(index, attr){
 	        return attr.split('-hover.').join('.');
 	    });
